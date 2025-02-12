@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigate to Another Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      background-image: url('backgroundImage.jpg');
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #5c5463;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="navigateToPage()">Click me 🥰</button>
+
+  <script>
+    function navigateToPage() {
+      window.location.href = 'index2.html'; 
+    }
+  </script>
+</body>
+</html>
