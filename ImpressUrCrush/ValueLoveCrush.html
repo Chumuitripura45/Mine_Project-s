@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f8dfe5;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background-color: #f8dfe5;
+            display: inline-block;
+            padding: 30px;
+            position: relative;
+        }
+
+        .container img {
+            width: 30rem;
+            height: 25rem;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 25px;
+            margin-right: 5rem;
+        }
+
+        .buttons div {
+            position: relative;
+        }
+
+        .buttons button {
+            background-color: #ffffff;
+            border: 2px solid #ff6b6b;
+            border-radius: 8px;
+            color: #ff6b6b;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            position: static;
+        }
+
+        #no {
+            position: absolute;
+        }
+
+        .buttons button:hover {
+            background-color: #ff6b6b;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./images/cryImage.png" alt="Cute Cat">
+        <div class="question">Ek aur baar soch lo!!! <span>😭</span></div>
+        <div style="margin-top: 20px;">Kyu aisa kar rahi ho 😭</div>
+        <div class="buttons">
+            <div><button id="yes">Yes</button></div>
+            <div><button id="no">No</button></div>
+        </div>
+    </div>
+    <script>
+        const noButton = document.getElementById('no');
+        const yesButton = document.getElementById('yes');
+
+        // Handle when "No" button is hover
+        noButton.addEventListener('mouseover', () => {
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            const buttonRect = noButton.getBoundingClientRect();
+
+            // Calculate new position ensuring the button stays within viewport
+            const maxTop = viewportHeight - buttonRect.height;
+            const maxLeft = viewportWidth - buttonRect.width;
+
+            const newTop = Math.random() * maxTop;
+            const newLeft = Math.random() * maxLeft;
+
+            noButton.style.top = `${newTop}px`;
+            noButton.style.left = `${newLeft}px`;
+            noButton.style.position = 'fixed'; 
+        });
+
+        yesButton.addEventListener('click', () => {
+            window.location.href = 'lastLoveCrush.html'; 
+        });
+    </script>
+</body>
+
+</html>

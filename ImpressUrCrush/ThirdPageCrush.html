@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f8dfe5;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background-color: #f8dfe5;
+            /* border-radius: 15px; */
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+            display: inline-block;
+            padding: 30px;
+        }
+
+        .container img {
+            width: 30rem;
+            height: 25rem;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .buttons button {
+            background-color: #ffffff;
+            border: 2px solid #ff6b6b;
+            border-radius: 8px;
+            color: #ff6b6b;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .buttons button:hover {
+            background-color: #ff6b6b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./images/value2last.png" alt="Cute Cat">
+        <div class="question">Baby kitna bhav khaogi, avi YES bol b doh<span>😭</span></div>
+        <div style="margin-top: 20px;">Bhut glt baat hai baby 🥲</div>
+        <div class="buttons">
+            <button id="yes">Yes</button>
+            <button id="no">No</button>
+        </div>
+    <script>
+         const addButton = document.getElementById('no');
+
+         addButton.addEventListener('click', () => {
+         window.location.href = 'valueLoveCrush.html'; // Replace 'newpage.html' with your desired URL
+    });
+    </script>
+</body>
+</html>
